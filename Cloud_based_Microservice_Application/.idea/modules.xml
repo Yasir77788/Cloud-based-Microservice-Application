@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Department_Service/DEPARTMENT-SERVICE/Department_Service.iml" filepath="$PROJECT_DIR$/Department_Service/DEPARTMENT-SERVICE/Department_Service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/MicroServices.iml" filepath="$PROJECT_DIR$/.idea/MicroServices.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Service-registry/Service-registry/Service-registry.iml" filepath="$PROJECT_DIR$/Service-registry/Service-registry/Service-registry.iml" />
+      <module fileurl="file://$PROJECT_DIR$/User_Service/USER-SERVICE/User_Service.iml" filepath="$PROJECT_DIR$/User_Service/USER-SERVICE/User_Service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud-config-server/cloud-config-server/cloud-config-server.iml" filepath="$PROJECT_DIR$/cloud-config-server/cloud-config-server/cloud-config-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud-gateway/cloud-gateway/cloud-gateway.iml" filepath="$PROJECT_DIR$/cloud-gateway/cloud-gateway/cloud-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hystrix-dashboard/hystrix-dashboard/hystrix-dashboard.iml" filepath="$PROJECT_DIR$/hystrix-dashboard/hystrix-dashboard/hystrix-dashboard.iml" />
+    </modules>
+  </component>
+</project>

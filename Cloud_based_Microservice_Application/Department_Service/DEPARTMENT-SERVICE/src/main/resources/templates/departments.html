@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <title>Department ment System</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+    <style>
+      footer{
+        background: mediumSeaGreen;
+        padding: 10px 15px;
+        color: #fff;
+        text-align: center;
+        margin-top:auto;
+      }
+
+    footer{
+	    position: fixed;
+	    bottom: 0;
+	    width: 100vw;
+        }
+    </style>
+
+</head>
+<body>
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <!-- Brand -->
+    <a class="navbar-brand" href="#">Department Management System</a>
+
+    <!-- Toggler/collapsibe Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/departments}">Department Management</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/departments}">Team Management</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class ="container">
+    <div class = "row">
+        <h1> Department List</h1>
+    </div>
+
+    <div class = "row">
+        <div class = "col-lg-3">
+            <a th:href = "@{/departments/new}" class = "btn btn-primary btn-sm mb-3"> Add Department</a>
+        </div>
+    </div>
+    <table class = "table table-striped table-bordered">
+        <thead class = "table-dark">
+        <tr>
+            <th> Department Name</th>
+            <th> Department Address </th>
+            <th> Department Code</th>
+            <th> Actions </th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr th:each = "department: ${departments}">
+
+            <td th:text = "${department.departmentName}"></td>
+            <td th:text = "${department.departmentAddress}"></td>
+            <td th:text = "${department.departmentCode}"></td>
+            <td>
+                <a th:href = "@{/departments/edit/{departmentId}(departmentId=${department.departmentId})}"
+                   class = "btn btn-primary">Update</a>
+
+                <a th:href = "@{/departments/{departmentId}(departmentId=${department.departmentId})}"
+                   class = "btn btn-danger">Delete</a>
+
+            </td>
+
+        </tr>
+        </tbody>
+
+    </table>
+
+</div>
+
+<footer>
+    <span>Created By Yasir Hassan | <span class="far fa-copyright"></span> May 13, 2022... yasir.hassan@fdmgroup.com</span>
+</footer>
+</body>
+</html>

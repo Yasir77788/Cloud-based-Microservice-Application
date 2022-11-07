@@ -1,0 +1,9 @@
+#conofig
+server:
+  port: 8761
+
+# config Eureka as my server - not going to Eureka to register itself
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false

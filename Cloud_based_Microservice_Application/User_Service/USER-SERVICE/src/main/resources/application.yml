@@ -1,0 +1,9 @@
+server:
+  port: 9002
+# name fo the app
+spring:
+  application:
+    name: USER-SERVICE
+  zipkin:
+    base-url: http://127.0.0.1:9411/
+

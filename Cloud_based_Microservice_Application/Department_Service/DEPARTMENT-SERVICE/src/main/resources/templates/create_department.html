@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Department Management System</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+    <style>
+      footer{
+        background: mediumSeaGreen;
+        padding: 10px 15px;
+        color: #fff;
+        text-align: center;
+        margin-top:auto;
+      }
+
+    footer{
+	    position: fixed;
+	    bottom: 0;
+	    width: 100vw;
+        }
+    </style>
+
+</head>
+<body>
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <!-- Brand -->
+    <a class="navbar-brand" href="#">Department Management System</a>
+
+    <!-- Toggler/collapsibe Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/departments}">Department Management</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<br>
+<br>
+<div class = "container">
+    <div class = "row">
+        <div class ="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
+            <h1 class = "text-center"> Create New Department</h1>
+            <div class = "card-body">
+                <form th:action="@{/departments}" th:object = "${department}" method="POST">
+                    <div class ="form-group">
+                        <label> Department Name </label>
+                        <input
+                                type = "text"
+                                name = "departmentName"
+                                th:field = "*{departmentName}"
+                                class = "form-control"
+                                placeholder="Enter department name"
+                        />
+                    </div>
+
+                    <div class ="form-group">
+                        <label> Department address </label>
+                        <input
+                                type = "text"
+                                name = "departmentAddress"
+                                th:field = "*{departmentAddress}"
+                                class = "form-control"
+                                placeholder="Enter department address"
+                        />
+                    </div>
+
+                    <div class ="form-group">
+                        <label> Department Code </label>
+                        <input
+                                type = "text"
+                                name = "departmentCode"
+                                th:field = "*{departmentCode}"
+                                class = "form-control"
+                                placeholder="Enter department code"
+                        />
+                    </div>
+
+                    <div class = "box-footer">
+                        <button type="submit" class = "btn btn-primary">
+                            Submit
+                        </button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <span>Created By Yasir Hassan | <span class="far fa-copyright"></span> May 13, 2022... yasir.hassan@fdmgroup.com</span>
+</footer>
+</body>
+</html>
